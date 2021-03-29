@@ -1,0 +1,72 @@
+{
+    "selector": "binance.ETH-USDT",
+    "deposit": 700,
+    "max_slippage": 0.05,
+    "stop_loss": 2,
+    "stop_gain": 2,
+    "sell_cancel": 0.2,
+    "quarentine_time": 0,
+    "interval_trade": 5,
+    "reverse": false,
+    "order_type": "maker",
+    "buy_pct": 99,
+    "sell_pct": 99,
+    "strategies":[
+        {
+            "id": "macd30m",
+            "name": "macd",
+            "period": "30m"
+        },
+        {
+            "id": "macd15m",
+            "name": "macd",
+            "period": "15m"
+        },
+        {
+            "id": "pivot30m",
+            "name": "pivot",
+            "period": "30m"
+        }
+    ],
+    "strategies_action":{
+        "buy": "((macd30m.buyORmacd15m.buy)ANDNOTpivot30m.sell)",
+        "sell": "((macd30m.sellANDNOTmacd15m.buy)ORpivot30m.sell)"
+    },
+    "minimal_roi": [
+        { "minutes": 40, "profit": 0.0 },
+        { "minutes": 30, "profit": 0.01 },
+        { "minutes": 20, "profit": 0.02 },
+        { "minutes": 0, "profit": 0.04 }
+    ],
+    "exchanges": {
+        "binance": {
+            "key": "",
+            "secret": ""
+        },
+        "gdax": {
+            "key": "",
+            "secret": "",
+            "passphrase": ""
+        },
+        "kraken": {
+            "key": "",
+            "secret": ""
+        }
+    },
+    "notifiers": {
+        "telegram": {
+            "on": true,
+            "bot_token": "",
+            "chat_id": ""
+        }
+    },
+    "mongo": {
+        "db": "tbfix",
+        "host": "localhost",
+        "port": 27017,
+        "username": null,
+        "password": null,
+        "replicaSet": null,
+        "authMechanism": null
+    }
+}

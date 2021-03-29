@@ -1,0 +1,1 @@
+mmf mmf_fast mmf_vol speed sar trend_ema pivot momentum ehlers_ft macd

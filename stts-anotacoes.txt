@@ -1,0 +1,23 @@
+5m:
+sar - Compra na alta e na baixa, exceto hiper alta e hiper baixa
+trend_ema - Compra na alta
+pivot - Compra na alta
+dema - Compra pouco
+kc -Compra na baixa
+ehlers_ft - Compra na alta e na baixa, exceto hiper alta
+momentum - Compra na alta e na baixa
+macd - Compra menos, mais na alta
+
+
+speed 
+trend_ema 
+sar 
+pivot 
+macd 
+momentum 
+ehlers_ft
+
+Para mercados muito volateis e com pouca liquidez, stts boas:
+macd
+pivot
+momentum

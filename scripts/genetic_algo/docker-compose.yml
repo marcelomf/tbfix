@@ -1,0 +1,19 @@
+server:
+  build: .
+  links:
+    - mongodb
+  command: [ "trade", "--paper" ]
+  restart: always
+  tty: true
+
+mongodb:
+  image: mongo:latest
+  volumes_from:
+    - mongodb-data
+  command: mongod --smallfiles
+
+mongodb-data:
+  image: mongo:latest
+  volumes:
+    - ./data/db:/data/db
+  command: "true"

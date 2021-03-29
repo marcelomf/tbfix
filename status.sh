@@ -1,0 +1,5 @@
+#!/bin/bash
+for PAIR in BTCBRL ETHBRL BTCUSDT ETHUSDT XRPUSDT TRXUSDT EOSUSDT ADAUSDT BNBUSDT; do
+	echo "STATUS $PAIR: "
+	node status.js $PAIR | grep '2021-03-'
+done;
