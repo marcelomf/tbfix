@@ -12,7 +12,7 @@ TBFIX - Just another tradebot trying to be profitable (Fork of zenbot, with a lo
 
 ## ALERT !!!
 
-1. Just use binance. I don't work in other exchanges. I don't know if tbfix work with others exchanges.
+1. Just use binance. I don't work in others exchanges. I don't know if tbfix work with others exchanges.
 2. Use simulate mode (./tbfix.sh sim ...) and paper mode (./tbfix.sh trade --paper ...)
 3. Use by your risk! It's an experimental project.
 
